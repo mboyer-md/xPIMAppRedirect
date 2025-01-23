@@ -34,7 +34,7 @@ namespace RedirectFunctionApp
             if (platform == "android")
             {
                 _logger.LogInformation("Platform is Android. Redirecting to Google Play Store.");
-                return RedirectResponse(req, "https://play.google.com/store/apps/details?id=com.x4dmobilesoft.xpim");
+                return RedirectResponse(req, "https://play.google.com/store/apps/details?id=com.mobiledemand.xscale");
             }
 
             // Windows detection
@@ -46,7 +46,7 @@ namespace RedirectFunctionApp
 
             // Fallback for other platforms
             _logger.LogWarning("Unsupported platform detected. Redirecting to Apple App Store as fallback.");
-            return RedirectResponse(req, "https://apps.apple.com/us/app/xpim/id6475213325");
+            return RedirectResponse(req, "https://apps.apple.com/us/app/xscale/id6477849456");
         }
 
         private HttpResponseData RedirectResponse(HttpRequestData req, string url)
